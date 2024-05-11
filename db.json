@@ -1,68 +1,68 @@
 {
-   "feed":[
-      {
-         "uri":"https://placehold.co/300x420/png",
-         "title":"Lacoste x Polaroid",
-         "price":64,
-         "id":"1"
-      },
-      {
-         "uri":"https://placehold.co/300x460/png",
-         "title":"lorem ipsum",
-         "id":"6",
-         "price":16
-      },
-      {
-         "uri":"https://placehold.co/300x440/png",
-         "id":"2",
-         "title":"Top Lacoste SPORT...",
-         "price":42
-      },
-      {
-         "uri":"https://placehold.co/300x410/png",
-         "id":"3",
-         "title":"Adidas Sport Tights",
-         "price":12
-      },
-      {
-         "uri":"https://placehold.co/300x380/png",
-         "id":"4",
-         "title":"Zara Cropped Top",
-         "price":21
-      },
-      {
-         "uri":"https://placehold.co/300x420/png",
-         "id":"5",
-         "title":"Bershka Monochrom...",
-         "price":18
-      },
-      {
-         "uri":"https://placehold.co/300x410/png",
-         "id":"5",
-         "title":"Lacoste Red Polar S...",
-         "price":6
-      },
-      {
-         "uri":"https://placehold.co/300x480/png",
-         "id":"7",
-         "title":"Adidas Printed Skirt",
-         "price":23
-      }
-   ],
-   "product":{
-      "uri":"https://placehold.co/300x480/png",
-      "id":"a9913132-0d22-4f73-aafd-d63b40e6cce7",
-      "title":"Bershka Mom Jeans",
-      "price":34,
-      "description":"These are the Mom Jeans you've been looking for. Let loose with this modern interpretation of a classic '90s style, featuring a flattering high rise and stacked, tapered leg. These jeans are designed to be worn as a relaxed, loose style.",
-      "tags":[
-         "Vintage",
-         "Glam",
-         "Durable",
-         "Luxury",
-         "Sustainable",
-         "Tapered",
-         "Jeans"
-      ]
-   }
+  "feed": [
+    {
+      "uri": "https://placehold.co/300x420/png",
+      "title": "Lacoste x Polaroid",
+      "price": 64,
+      "id": "1"
+    },
+    {
+      "uri": "https://placehold.co/300x460/png",
+      "title": "lorem ipsum",
+      "id": "6",
+      "price": 16
+    },
+    {
+      "uri": "https://placehold.co/300x440/png",
+      "id": "2",
+      "title": "Top Lacoste SPORT...",
+      "price": 42
+    },
+    {
+      "uri": "https://placehold.co/300x410/png",
+      "id": "3",
+      "title": "Adidas Sport Tights",
+      "price": 12
+    },
+    {
+      "uri": "https://placehold.co/300x380/png",
+      "id": "4",
+      "title": "Zara Cropped Top",
+      "price": 21
+    },
+    {
+      "uri": "https://placehold.co/300x420/png",
+      "id": "5",
+      "title": "Bershka Monochrom...",
+      "price": 18
+    },
+    {
+      "uri": "https://placehold.co/300x410/png",
+      "id": "5",
+      "title": "Lacoste Red Polar S...",
+      "price": 6
+    },
+    {
+      "uri": "https://placehold.co/300x480/png",
+      "id": "7",
+      "title": "Adidas Printed Skirt",
+      "price": 23
+    }
+  ],
+  "product": {
+    "uri": "https://placehold.co/300x480/png",
+    "id": "a9913132-0d22-4f73-aafd-d63b40e6cce7",
+    "title": "Bershka Mom Jeans",
+    "price": 34,
+    "description": "These are the Mom Jeans you've been looking for. Let loose with this modern interpretation of a classic '90s style, featuring a flattering high rise and stacked, tapered leg. These jeans are designed to be worn as a relaxed, loose style.",
+    "tags": [
+      "Vintage",
+      "Glam",
+      "Durable",
+      "Luxury",
+      "Sustainable",
+      "Tapered",
+      "Jeans"
+    ]
+  }
 }
