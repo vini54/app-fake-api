@@ -50,7 +50,7 @@
     }
   ],
   "product": {
-    "uri": "https://placehold.co/300x480/png",
+    "uri": ["https://placehold.co/300x480/png", "https://placehold.co/300x480/png", "https://placehold.co/300x480/png"],
     "id": "a9913132-0d22-4f73-aafd-d63b40e6cce7",
     "title": "Bershka Mom Jeans",
     "price": 34,
