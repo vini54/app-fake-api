@@ -48,5 +48,20 @@
       "title": "Adidas Printed Skirt",
       "price": 23
     }
-  ]
+  ],
+  product: {
+      "uri": "https://placehold.co/300x480/png",
+      "id": "a9913132-0d22-4f73-aafd-d63b40e6cce7",
+      "title": "Bershka Mom Jeans",
+      "price": 34
+      "description": 
+    "These are the Mom Jeans you've been looking for. Let loose with this modern interpretation of a classic '90s style, featuring a flattering high rise and stacked, tapered leg. These jeans are designed to be worn as a relaxed, loose style.
+    - Waist-emphasizing high rise
+    - Relaxed fit for a vintage-inspired look
+    - Tapered leg for tailored style
+    - Sustainably made with TENCEL™ fabric
+    - Loose through your hip and thigh
+    - Super high rise
+    - Model is and is wearing a size 27 waist"
+  }
 }
