@@ -1,0 +1,146 @@
+{
+  "uuid": "3eb79c6e-01c2-4b84-b372-8354286b6844",
+  "lastMigration": 32,
+  "name": "fake_api",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "07c6ee0b-3e91-4281-b4b1-90526162a9f9",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "90e085e8-0f72-44fd-8d32-2479f2e76124",
+          "body": "{\n  \"data\": \"server started!\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "88c0aab5-6de2-4afe-9ab7-6a99c70cba79",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "feed",
+      "responses": [
+        {
+          "uuid": "b5f80b58-a46b-44fb-83da-5064e73e98a2",
+          "body": "{\n  \"data\": [\n    {{#repeat 10}}\n    {\n      \"uri\": \"https://placehold.co/300x{{int 400 620}}/png\",\n      \"title\": \"{{faker 'commerce.productName'}}\",\n      \"price\": {{int 12 78}},\n      \"id\": \"{{faker 'string.uuid'}}\"\n    }\n    {{/repeat}}\n    \n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "7870b7f8-4bce-4058-a86e-36594f1edd72",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "product/:id",
+      "responses": [
+        {
+          "uuid": "deb200e2-e74c-4cd9-8ab8-2f4b717eb3d9",
+          "body": "{\n  \"data\": {\n    \"uri\": [\n      \"https://placehold.co/300x{{int 400 620}}/png\",\n      \"https://placehold.co/300x{{int 400 620}}/png\",\n      \"https://placehold.co/300x{{int 400 620}}/png\"\n    ],\n    \"id\": \"{{urlParam 'id'}}\",\n    \"title\": \"{{faker 'commerce.productName'}}\",\n    \"price\": {{int 16 90}},\n    \"description\": \"{{faker 'commerce.productDescription'}}\",\n    \"tags\": [\n      \"Vintage\",\n      \"Glam\",\n      \"Durable\",\n      \"Luxury\",\n      \"Sustainable\",\n      \"Tapered\",\n      \"Jeans\"\n    ]\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "07c6ee0b-3e91-4281-b4b1-90526162a9f9"
+    },
+    {
+      "type": "route",
+      "uuid": "88c0aab5-6de2-4afe-9ab7-6a99c70cba79"
+    },
+    {
+      "type": "route",
+      "uuid": "7870b7f8-4bce-4058-a86e-36594f1edd72"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}

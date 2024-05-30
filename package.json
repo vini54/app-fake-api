@@ -1,0 +1,15 @@
+{
+  "name": "fake-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "mockoon-cli start --data ./datafile.json",
+    "dev": "mockoon-cli start --data ./datafile.json"
+  },
+  "repository": "git@github.com:vini54/app-fake-api.git",
+  "author": "vini54 <vinioli544@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@mockoon/cli": "^8.1.1"
+  }
+}

@@ -1,0 +1,6 @@
+.env
+node_modules
+
+# mockoon config
+# datafile.json
+.vercel
