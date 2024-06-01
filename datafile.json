@@ -46,7 +46,7 @@
       "responses": [
         {
           "uuid": "b5f80b58-a46b-44fb-83da-5064e73e98a2",
-          "body": "{\n  \"data\": [\n    {{#repeat 10}}\n    {\n      \"uri\": \"https://placehold.co/300x{{int 400 620}}/png\",\n      \"title\": \"{{faker 'commerce.productName'}}\",\n      \"price\": {{int 12 78}},\n      \"id\": \"{{faker 'string.uuid'}}\"\n    }\n    {{/repeat}}\n    \n  ]\n}",
+          "body": "{\n  \"data\": [\n    {{#repeat 10}}\n    {\n      \"uri\": \"https://random.imagecdn.app/300/{{int 300 420}}\",\n      \"image\": \"https://placehold.co/300x{{int 300 520}}/png\",\n      \"title\": \"{{faker 'commerce.productName'}}\",\n      \"price\": {{int 12 78}},\n      \"id\": \"{{faker 'string.uuid'}}\"\n    }\n    {{/repeat}}\n  ]\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -75,7 +75,36 @@
       "responses": [
         {
           "uuid": "deb200e2-e74c-4cd9-8ab8-2f4b717eb3d9",
-          "body": "{\n  \"data\": {\n    \"uri\": [\n      \"https://placehold.co/300x{{int 400 620}}/png\",\n      \"https://placehold.co/300x{{int 400 620}}/png\",\n      \"https://placehold.co/300x{{int 400 620}}/png\"\n    ],\n    \"id\": \"{{urlParam 'id'}}\",\n    \"title\": \"{{faker 'commerce.productName'}}\",\n    \"price\": {{int 16 90}},\n    \"description\": \"{{faker 'commerce.productDescription'}}\",\n    \"tags\": [\n      \"Vintage\",\n      \"Glam\",\n      \"Durable\",\n      \"Luxury\",\n      \"Sustainable\",\n      \"Tapered\",\n      \"Jeans\"\n    ]\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"images\": [\n      \"{{faker 'image.url' 640 480 true }}\",\n      \"{{faker 'image.url' 640 480 true }}\",\n      \"{{faker 'image.url' 640 480 true }}\"\n    ],\n    \"id\": \"{{urlParam 'id'}}\",\n    \"title\": \"{{faker 'commerce.productName'}}\",\n    \"price\": {{int 16 90}},\n    \"description\": \"{{faker 'commerce.productDescription'}}\",\n    \"avatar\": \"{{faker 'image.business' 640 480 true }}\",\n    \"variants\": [\n      {\n        \"title\": \"Cores\",\n        \"value\": \"color\",\n        \"options\": [\n          {\"label\": \"Azul\", \"color\": \"blue\"},\n          {\"label\": \"Preto\", \"color\": \"black\"},\n          {\"label\": \"Branco\", \"color\": \"white\"}\n        ]\n      },\n      {\n        \"title\": \"Tamanhos\",\n        \"value\": \"size\",\n        \"options\": [\n            {\"label\": \"P\"},\n            {\"label\": \"M\"},\n            {\"label\": \"G\"},\n            {\"label\": \"GG\"}\n          ]\n      }\n      ],\n    \"tags\": [\n      {{#repeat 8}}\n      \"{{faker 'commerce.department'}}\",\n      {{/repeat}}\n    ]\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "13af309c-d533-4930-9ce9-773d4d7fbc3f",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "recommend",
+      "responses": [
+        {
+          "uuid": "fef34a9c-560e-4086-b581-dc314b016619",
+          "body": "{\n  \"data\": [\n    {{#repeat 5}}\n    {\n      \"image\": \"https://random.imagecdn.app/300/{{int 300 420}}\",\n      \"title\": \"{{faker 'commerce.productName'}}\",\n      \"finalPrice\": {{oneOf (array 26 32 0 0 0)}},\n      \"originalPrice\": {{int 36 42}},\n      \"id\": \"{{faker 'string.uuid'}}\"\n    }\n    {{/repeat}}\n  ]\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -108,6 +137,10 @@
     {
       "type": "route",
       "uuid": "7870b7f8-4bce-4058-a86e-36594f1edd72"
+    },
+    {
+      "type": "route",
+      "uuid": "13af309c-d533-4930-9ce9-773d4d7fbc3f"
     }
   ],
   "proxyMode": false,
