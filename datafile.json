@@ -123,6 +123,64 @@
         }
       ],
       "responseMode": null
+    },
+    {
+      "uuid": "c7033822-5c09-447c-8426-51ede9fca113",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "market/featured",
+      "responses": [
+        {
+          "uuid": "c1ea538d-a12c-462a-bb3c-14aa752d4a3c",
+          "body": "{\n  \"data\": {\n    \"spotlights\": [\n      {\n        \"title\": \"Festival West cost\",\n        \"tag\": \"luxury\",\n        \"image\": \"https://images.unsplash.com/photo-1601618752436-7b60b7818699?q=80&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      },\n      {\n        \"title\": \"For the love of nature\",\n        \"tag\": \"sustainable\",\n        \"image\": \"https://images.unsplash.com/photo-1621468635836-494461c17b64?q=80&w=640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      },\n      {\n        \"title\": \"Fashionable range of apparels\",\n        \"tag\": \"Glam\",\n        \"image\": \"https://images.unsplash.com/photo-1493146146946-e907f69cdf23?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      }\n    ],\n    \"newStores\": [\n      {\n        \"title\": \"Levi’s\",\n        \"tags\": [\"Denim\", \"Casual\"],\n        \"avatar\": \"https://logodownload.org/wp-content/uploads/2017/04/levis-logo-1.png\",\n        \"banner\": \"https://images.unsplash.com/photo-1582213153939-613105f23a1b?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      },\n      {\n        \"title\": \"Lacoste\",\n        \"tags\": [\"Casual\", \"Luxury\"],\n        \"avatar\": \"https://logowik.com/content/uploads/images/lacoste-crocodile6472.logowik.com.webp\",\n        \"banner\": \"https://random.imagecdn.app/300/{{int 300 420}}\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      },\n      {\n        \"title\": \"Bershka\",\n        \"tags\": [\"Denim\", \"Luxury\"],\n        \"avatar\": \"https://logowik.com/content/uploads/images/bershka5769.logowik.com.webp\",\n        \"banner\": \"https://random.imagecdn.app/300/{{int 300 420}}\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      }\n    ],\n    \"collections\": [\n      {\n        \"title\": \"Lacoste x Polaroid\",\n        \"store\": \"Lacoste\",\n        \"image\": \"https://random.imagecdn.app/300/{{int 300 420}}\",\n        \"avatar\": \"https://logowik.com/content/uploads/images/lacoste-crocodile6472.logowik.com.webp\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      },\n      {\n        \"title\": \"Cartoon Network\",\n        \"store\": \"Bershka\",\n        \"image\": \"https://random.imagecdn.app/300/{{int 300 420}}\",\n        \"avatar\": \"https://logowik.com/content/uploads/images/bershka5769.logowik.com.webp\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      },\n      {\n        \"title\": \"Stan Smith, Forever\",\n        \"store\": \"Adidas\",\n        \"image\": \"https://random.imagecdn.app/300/{{int 300 420}}\",\n        \"avatar\": \"https://seeklogo.com/images/A/adidas-logo-107B082DA0-seeklogo.com.png\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      }\n    ],\n    \"sales\": [\n    {{#repeat 5}}\n    {\n      \"image\": \"https://random.imagecdn.app/300/{{int 300 420}}\",\n      \"title\": \"{{faker 'commerce.productName'}}\",\n      \"finalPrice\": {{oneOf (array 26 32 24 30)}},\n      \"originalPrice\": {{int 36 42}},\n      \"id\": \"{{faker 'string.uuid'}}\"\n    }\n    {{/repeat}}\n  ]\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "144b96a2-9359-43ad-886a-5123164047d6",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "market/stores",
+      "responses": [
+        {
+          "uuid": "690db513-ccee-436c-a299-9e4d7b5566f4",
+          "body": "{\n  \"data\": {\n    \"spotlight\": {\n      \"title\": \"Nike\",\n      \"tags\": [\n        \"Sport\",\n        \"Casual\"\n      ],\n      \"avatar\": \"https://logowik.com/content/uploads/images/nike-swoosh5938.logowik.com.webp\",\n      \"banner\": \"https://random.imagecdn.app/300/{{int 300 420}}\",\n      \"id\": \"{{faker 'string.uuid'}}\"\n    },\n    \"new\": [\n      {\n        \"title\": \"Levi’s\",\n        \"tags\": [\n          \"Denim\",\n          \"Casual\"\n        ],\n        \"avatar\": \"https://logodownload.org/wp-content/uploads/2017/04/levis-logo-1.png\",\n        \"banner\": \"https://images.unsplash.com/photo-1582213153939-613105f23a1b?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      },\n      {\n        \"title\": \"Lacoste\",\n        \"tags\": [\n          \"Casual\",\n          \"Luxury\"\n        ],\n        \"avatar\": \"https://logowik.com/content/uploads/images/lacoste-crocodile6472.logowik.com.webp\",\n        \"banner\": \"https://random.imagecdn.app/300/{{int 300 420}}\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      },\n      {\n        \"title\": \"Bershka\",\n        \"tags\": [\n          \"Denim\",\n          \"Luxury\"\n        ],\n        \"avatar\": \"https://logowik.com/content/uploads/images/bershka5769.logowik.com.webp\",\n        \"banner\": \"https://random.imagecdn.app/300/{{int 300 420}}\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      }\n    ],\n    \"sales\": [\n      {\n        \"title\": \"Lacoste\",\n        \"tags\": [\n          \"Casual\",\n          \"Luxury\"\n        ],\n        \"avatar\": \"https://logowik.com/content/uploads/images/lacoste-crocodile6472.logowik.com.webp\",\n        \"banner\": \"https://random.imagecdn.app/300/{{int 300 420}}\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      },\n      {\n        \"title\": \"Bershka\",\n        \"tags\": [\n          \"Denim\",\n          \"Luxury\"\n        ],\n        \"avatar\": \"https://logowik.com/content/uploads/images/bershka5769.logowik.com.webp\",\n        \"banner\": \"https://random.imagecdn.app/300/{{int 300 420}}\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      },\n      {\n        \"title\": \"Levi’s\",\n        \"tags\": [\n          \"Denim\",\n          \"Casual\"\n        ],\n        \"avatar\": \"https://logodownload.org/wp-content/uploads/2017/04/levis-logo-1.png\",\n        \"banner\": \"https://images.unsplash.com/photo-1582213153939-613105f23a1b?q=80&w=480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      }\n    ],\n    \"all\": [\n      {\n        \"title\": \"Levi’s\",\n        \"avatar\": \"https://logodownload.org/wp-content/uploads/2017/04/levis-logo-1.png\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      },\n      {\n        \"title\": \"Lacoste\",\n        \"avatar\": \"https://logowik.com/content/uploads/images/lacoste-crocodile6472.logowik.com.webp\",\n        \"discount\": 12,\n        \"id\": \"{{faker 'string.uuid'}}\"\n      },\n      {\n        \"title\": \"Bershka\",\n        \"avatar\": \"https://logowik.com/content/uploads/images/bershka5769.logowik.com.webp\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      },\n      {\n        \"title\": \"Adidas\",\n        \"avatar\": \"https://seeklogo.com/images/A/adidas-logo-107B082DA0-seeklogo.com.png\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      },\n      {\n        \"title\": \"Zara\",\n        \"avatar\": \"https://logowik.com/content/uploads/images/zara-new3742.logowik.com.webp\",\n        \"id\": \"{{faker 'string.uuid'}}\"\n      },\n      {\n        \"title\": \"BOSS\",\n        \"avatar\": \"https://logowik.com/content/uploads/images/boss-hugo-boss1804.logowik.com.webp\",\n        \"discount\": 15,\n        \"id\": \"{{faker 'string.uuid'}}\"\n      }\n    ]\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
     }
   ],
   "rootChildren": [
@@ -141,6 +199,14 @@
     {
       "type": "route",
       "uuid": "13af309c-d533-4930-9ce9-773d4d7fbc3f"
+    },
+    {
+      "type": "route",
+      "uuid": "c7033822-5c09-447c-8426-51ede9fca113"
+    },
+    {
+      "type": "route",
+      "uuid": "144b96a2-9359-43ad-886a-5123164047d6"
     }
   ],
   "proxyMode": false,
