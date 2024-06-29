@@ -181,6 +181,64 @@
         }
       ],
       "responseMode": null
+    },
+    {
+      "uuid": "d26f0bd7-15c0-41c2-bb59-07b4e980b54c",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "collection/:id",
+      "responses": [
+        {
+          "uuid": "ac265f99-9e0d-403d-8ea1-be5089552fa1",
+          "body": "{\n  \"data\": {\n    \"title\": \"Lacoste x Polaroid\",\n    \"store\": \"Lacoste\",\n    \"images\": [\n      \"https://random.imagecdn.app/300/{{int 300 420}}\",\n      \"https://random.imagecdn.app/300/{{int 300 420}}\",\n      \"https://random.imagecdn.app/300/{{int 300 420}}\"\n    ],\n    \"avatar\": \"https://logowik.com/content/uploads/images/lacoste-crocodile6472.logowik.com.webp\",\n    \"id\": \"{{faker 'string.uuid'}}\",\n    \"description\": \"With its retro-modern vibes, the Lacoste x Polaroid collection brings together vibrant colors and the inclusive spirit.\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "16353b53-7a2e-43d8-8f09-fd5ca080cd5a",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "products",
+      "responses": [
+        {
+          "uuid": "c6046435-c2f3-4b4b-a0bf-1d749a4f0b90",
+          "body": "{\n  \"data\": [\n    {{#repeat 10}}\n    {\n      \"uri\": \"https://random.imagecdn.app/300/{{int 300 420}}\",\n      \"image\": \"https://placehold.co/300x{{int 300 520}}/png\",\n      \"title\": \"{{faker 'commerce.productName'}}\",\n      \"price\": {{int 12 78}},\n      \"id\": \"{{faker 'string.uuid'}}\"\n    }\n    {{/repeat}}\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
     }
   ],
   "rootChildren": [
@@ -207,6 +265,14 @@
     {
       "type": "route",
       "uuid": "144b96a2-9359-43ad-886a-5123164047d6"
+    },
+    {
+      "type": "route",
+      "uuid": "d26f0bd7-15c0-41c2-bb59-07b4e980b54c"
+    },
+    {
+      "type": "route",
+      "uuid": "16353b53-7a2e-43d8-8f09-fd5ca080cd5a"
     }
   ],
   "proxyMode": false,
