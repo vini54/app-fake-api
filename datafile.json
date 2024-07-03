@@ -75,7 +75,7 @@
       "responses": [
         {
           "uuid": "deb200e2-e74c-4cd9-8ab8-2f4b717eb3d9",
-          "body": "{\n  \"data\": {\n    \"images\": [\n      \"{{faker 'image.url' 640 480 true }}\",\n      \"{{faker 'image.url' 640 480 true }}\",\n      \"{{faker 'image.url' 640 480 true }}\"\n    ],\n    \"id\": \"{{urlParam 'id'}}\",\n    \"title\": \"{{faker 'commerce.productName'}}\",\n    \"price\": {{int 16 90}},\n    \"description\": \"{{faker 'commerce.productDescription'}}\",\n    \"avatar\": \"{{faker 'image.business' 640 480 true }}\",\n    \"variants\": [\n      {\n        \"title\": \"Cores\",\n        \"value\": \"color\",\n        \"options\": [\n          {\"label\": \"Azul\", \"color\": \"blue\"},\n          {\"label\": \"Preto\", \"color\": \"black\"},\n          {\"label\": \"Branco\", \"color\": \"white\"}\n        ]\n      },\n      {\n        \"title\": \"Tamanhos\",\n        \"value\": \"size\",\n        \"options\": [\n            {\"label\": \"P\"},\n            {\"label\": \"M\"},\n            {\"label\": \"G\"},\n            {\"label\": \"GG\"}\n          ]\n      }\n      ],\n    \"tags\": [\n      {{#repeat 8}}\n      \"{{faker 'commerce.department'}}\",\n      {{/repeat}}\n    ]\n  }\n}",
+          "body": "{\n  \"data\": {\n    \"images\": [\n      \"{{faker 'image.url' 640 480 true }}\",\n      \"{{faker 'image.url' 640 480 true }}\",\n      \"{{faker 'image.url' 640 480 true }}\"\n    ],\n    \"id\": \"{{urlParam 'id'}}\",\n    \"title\": \"{{faker 'commerce.productName'}}\",\n    \"price\": {{int 16 90}},\n    \"description\": \"{{faker 'commerce.productDescription'}}\",\n    \"avatar\": \"{{faker 'image.business' 640 480 true }}\",\n    \"variants\": [\n      {\n        \"title\": \"Colors\",\n        \"value\": \"color\",\n        \"options\": [\n          {\"label\": \"Azul\", \"color\": \"blue\"},\n          {\"label\": \"Preto\", \"color\": \"black\"},\n          {\"label\": \"Branco\", \"color\": \"white\"}\n        ]\n      },\n      {\n        \"title\": \"Sizes\",\n        \"value\": \"size\",\n        \"options\": [\n            {\"label\": \"P\"},\n            {\"label\": \"M\"},\n            {\"label\": \"G\"},\n            {\"label\": \"GG\"}\n          ]\n      }\n      ],\n    \"tags\": [\n      {{#repeat 8}}\n      \"{{faker 'commerce.department'}}\",\n      {{/repeat}}\n    ]\n  }\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -191,7 +191,36 @@
       "responses": [
         {
           "uuid": "c6046435-c2f3-4b4b-a0bf-1d749a4f0b90",
-          "body": "{\n  \"data\": [\n    {{#repeat 10}}\n    {\n      \"image\": \"https://placehold.co/300x{{int 300 520}}/png\",\n      \"title\": \"{{faker 'commerce.productName'}}\",\n      \"price\": {{int 12 78}},\n      \"id\": \"{{faker 'string.uuid'}}\"\n    }\n    {{/repeat}}\n  ]\n}",
+          "body": "{\n  \"data\": [\n    {{#repeat 10}}\n    {\n      \"image\": \"https://random.imagecdn.app/300/{{int 300 420}}\",\n      \"title\": \"{{faker 'commerce.productName'}}\",\n      \"price\": {{int 12 78}},\n      \"id\": \"{{faker 'string.uuid'}}\"\n    }\n    {{/repeat}}\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "28b775ce-be46-49fe-b705-bdc9c80ff082",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "store/:id",
+      "responses": [
+        {
+          "uuid": "b8dc3b99-a884-4dde-826e-59fc3261ab8d",
+          "body": "{\n  \"data\": {\n    \"title\": \"Bershka\",\n    \"avatar\": \"https://logowik.com/content/uploads/images/bershka5769.logowik.com.webp\",\n    \"verified\": true,\n    \"id\": \"{{urlParam 'id'}}\"\n  }\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -240,6 +269,10 @@
     {
       "type": "route",
       "uuid": "16353b53-7a2e-43d8-8f09-fd5ca080cd5a"
+    },
+    {
+      "type": "route",
+      "uuid": "28b775ce-be46-49fe-b705-bdc9c80ff082"
     }
   ],
   "proxyMode": false,
